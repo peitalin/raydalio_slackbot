@@ -65,7 +65,6 @@ def carl_icahn(start='2012-01-01', end='2017-01-01'):
     else:
         print("Significant at the 5% level: p-value: {:.4f}".format(pval3))
 
-    return results1.summary() + '\n' + results3.summary()
 
 
 def warren_buffett(start='2012-01-01', end='2017-01-01'):
@@ -105,7 +104,6 @@ def warren_buffett(start='2012-01-01', end='2017-01-01'):
     else:
         print("Significant at the 5% level: p-value: {:.4f}".format(pval3))
 
-    return results1.summary() + '\n' + results3.summary()
 
 
 
@@ -159,14 +157,11 @@ if __name__=="__main__":
     investor = sys.argv[1].lower()
     if "carl" in investor or "icahn" in investor:
         carl_icahn(sys.argv[2], sys.argv[3])
-        sys.stdout.flush()
 
     if "warren" in investor or "buffet" in investor:
         warren_buffett(sys.argv[2], sys.argv[3])
-        sys.stdout.flush()
 
     if "ray" in investor or "dalio" in investor:
         print("Need data on Ray's 'Pure Alpha' and 'All Weather' portfolios")
-        sys.stdout.flush()
 
 
