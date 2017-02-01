@@ -136,9 +136,11 @@ BRKA_data3['BRKA_excess_returns'] = BRKA_data3['BRKA_returns'] - BRKA_data3['RF'
 
 
 
-app = Flask(__name__)
+application = Flask(__name__)
+application.debug = True
+# application.run(host='0.0.0.0')
 
-@app.route('/', methods=['GET', 'POST'])
+@application.route('/', methods=['GET', 'POST'])
 def login():
     if request.method == 'POST':
         investor = request.form['investor']
@@ -161,5 +163,11 @@ def login():
         return "investor name must be either 'carl icahn', 'warren buffett', or 'ray dalio'"
 
     else:
-        return "GET"
+        return "YOUR REQUEST: GET"
+
+
+
+if __name__=="__main__":
+    application.run()
+
 
