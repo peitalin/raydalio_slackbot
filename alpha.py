@@ -384,13 +384,14 @@ if __name__=="__main__":
     if "david" in investor or "einhorn" in investor:
         print(david_einhorn(sys.argv[2], sys.argv[3]))
 
+    if "all-weather" in investor:
+        print(all_weather(sys.argv[2], sys.argv[3]))
+
+    if "pure-alpha" in investor:
+        print(pure_alpha(sys.argv[2], sys.argv[3]))
+
     if "ray" in investor or "dalio" in investor:
-        if "weather" in investor:
-            print(all_weather(sys.argv[2], sys.argv[3]))
-        elif "pure" in investor:
-            print(pure_alpha(sys.argv[2], sys.argv[3]))
-        else:
-            print("Try 'ray dalio all weather' or 'ray dalio pure alpha' for 'investor' parameter")
+        print("Try 'ray dalio all weather' or 'ray dalio pure alpha' for 'investor' parameter")
 
 
 
